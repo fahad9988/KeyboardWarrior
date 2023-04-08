@@ -6,7 +6,6 @@ export interface ModalProps {
   onClose: () => void;
   title: string;
   children: React.ReactNode;
-  showModal: boolean;
 };
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
@@ -16,10 +15,16 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
 
   return (
     <div className={modalClasses}>
+
+
+      
       <div
         className="absolute inset-0 bg-gray-900 opacity-75"
         onClick={onClose}
-      ></div>
+      >
+
+      </div>
+
       <div className="bg-white rounded-lg shadow-lg p-4 mx-4 md:mx-auto mt-4 md:mt-32 z-20">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">{title}</h2>
@@ -43,6 +48,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
         </div>
         {children}
       </div>
+
+
+
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import GameBoard from './components/GameBoard';
 import PlayerScore from './components/PlayerScore';
@@ -23,9 +23,10 @@ function App() {
     const intervalId = setInterval(() => {
       setTimer((prevTimer) => prevTimer - 1);
     }, 1000);
+    handleGameOver()
 
     return () => clearInterval(intervalId);
-  }, []);
+  });
 
   useEffect(() => {
     if (timer === 0) {
@@ -35,7 +36,7 @@ function App() {
 
   const handleScoreUpdate = (player:number) => {
     if (player === currentPlayer) {
-      if (timer < 10) {
+      if (timer > 0) {
         if (player === 1) {
           setPlayer1Score((prevScore) => prevScore + 1);
         } else {
@@ -51,8 +52,14 @@ function App() {
   };
 
   const handleGameOver = () => {
-    setGameOver(true);
-    setWinner(player1Score > player2Score ? 1 : 2);
+    if(player1Score==10){
+      setGameOver(true);
+      setWinner(1);
+    }else if(player2Score==10){
+      setGameOver(true);
+      setWinner(2);
+    }
+    
   };
 
   const handleRestartGame = () => {
@@ -82,11 +89,16 @@ function App() {
       </div>
       {gameOver && (
   <GameOverModal
-  isOpen={true}
-  onClose={() => {}}
+  isOpen={gameOver}
+  onClose={() => {  
+    setPlayer1Score(0);
+    setPlayer2Score(0);
+    setGameOver(false);
+    setWinner(0);
+    setRandomString(generateRandomString(10));
+    setTimer(10);}}
   title={`Player ${winner} Wins!`}
   winner={winner}
-  showModal={true}
   onRestartGame={handleRestartGame}
   children={null}
 />
