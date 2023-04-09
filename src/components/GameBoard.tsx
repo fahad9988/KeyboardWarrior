@@ -42,7 +42,7 @@ const GameBoard: React.FC<GameBoardProps> = ({
     if (inputRef.current) {
       inputRef.current.focus();
     }
-  }, []);
+  }, [randomString]);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTypedString(event.target.value);
@@ -54,13 +54,12 @@ const GameBoard: React.FC<GameBoardProps> = ({
       onScoreUpdate(currentPlayer);
       setTypedString("");
       setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
-      setRandomString(generateRandomString(10));
+      setRandomString(generateRandomString(8));
     }else{
       onScoreUpdate(0);
       setTypedString("");
-      setRandomString(generateRandomString(10));
+      setRandomString(generateRandomString(8));
     }
-
   };
 
   // const generateRandomString = () => {
@@ -77,7 +76,7 @@ const GameBoard: React.FC<GameBoardProps> = ({
   return (
     <div className="flex flex-col justify-center items-center mt-10">
       <div className="text-xl mb-4">
-        Player {currentPlayer}'s turn ({timer}s remaining)
+       {currentPlayer==1?localStorage.getItem("player1Name"):localStorage.getItem("player2Name")}'s turn ({timer}s remaining)
       </div>
       <div className="text-2xl font-bold mb-4">{randomString}</div>
       <form onSubmit={handleFormSubmit}>
