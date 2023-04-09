@@ -56,10 +56,10 @@ let player2=localStorage.getItem("player2Name");
   };
 
   const handleGameOver = () => {
-    if(player1Score==10){
+    if(player1Score==5){
       setGameOver(true);
       setWinner(1);
-    }else if(player2Score==10){
+    }else if(player2Score==5){
       setGameOver(true);
       setWinner(2);
     }

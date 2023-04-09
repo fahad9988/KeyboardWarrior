@@ -17,7 +17,7 @@ const GameOverModal: React.FC<GameOverModalProps> = ({
     <Modal isOpen={isOpen} onClose={onClose} title={`Player ${winner} Wins!`}>
       <div className="bg-white rounded-md px-8 py-6">
         <div className="text-center text-3xl font-bold mb-4">
-          {winner === 1 ? "Player 1" : "Player 2"} Wins!
+          {winner === 1 ? localStorage.getItem("player1Name") : localStorage.getItem("player2Name")} Wins!
         </div>
         {/* {onNewGame && (
           <div className="flex justify-center">
