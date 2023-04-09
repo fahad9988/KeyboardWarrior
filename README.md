@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+<h1>Keyboard Warrior</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Homepage</h2>
+<img src="https://i.ibb.co/9sYdhvG/Screenshot-10022.png" alt="Fashionista" border="0">
+<h2>Signup Page</h2>
+<img src="https://i.ibb.co/XCLmmNR/Screenshot-10023.png" alt="Fashionista" border="0">
+<h2>Login Page</h2>
+<img src="https://i.ibb.co/mSJvpw3/Screenshot-10024.png" alt="Fashionista" border="0">
+<h2>Info Page</h2>
+<img src="https://i.ibb.co/JjjfpwD/Screenshot-10027.png" alt="Fashionista" border="0">
+<h2>Game Page</h2>
+<img src="https://i.ibb.co/MnMKYdR/Screenshot-10028.png" alt="Fashionista" border="0">
+<h2>Instructions Page</h2>
+<img src="https://i.ibb.co/zNRdqtH/Screenshot-10025.png" alt="Fashionista" border="0">
+<h2>About Page</h2>
+<img src="https://i.ibb.co/GCGW9J3/Screenshot-10026.png" alt="Fashionista" border="0">
 
-## Available Scripts
+<h1>About the Game</h1>
+<p>Welcome to Keyboard Warrior, a multiplayer game where two players compete to see who is faster at typing! The objective of the game is simple - type a randomly generated string within 10 seconds. If the typed string matches the generated string, the player will be awarded one point. The first player to reach a score of 5 points wins the game.</p>
+<h2>How to Play</h2>
+<ul>
+  <li>Type your name to join the game.</li>
+<li>Wait for another player to join the game.</li>
+<li>A random string will be generated for the first player to type.</li>
+<li>Type the string before the 10-second timer runs out.</li>
+<li>If your string matches the generated string, you’ll be awarded one point.</li>
+<li>The next player will get a chance with a newly generated string.</li>
+<li>The first player to reach a score of 5 points wins the game.</li>
+  </ul>
+<h2>Scoring</h2>
+<p>Each player starts with 0 points. If you type the generated string correctly within the 10-second timer, you’ll be awarded one point. The first player to reach a score of 5 points wins the game.</p>
+<h2>Technical Requirements</h2>
+<p>Keyboard Warrior requires a modern web browser with JavaScript enabled. The game is optimized for desktop and laptop computers, but should work on most mobile devices as well.</p>
+<h2>About the Developers</h2>
+<p>Keyboard Warrior was developed by four enthusiastic programmers - Owaise, Fahad, Chandra Sekhar, and Sahil - as part of a 48-hour hackathon project. We came up with the idea for this game because we wanted to create a fun and engaging way for people to improve their typing skills.
+Our team has put a lot of effort into making this game as enjoyable as possible for our users. We’ve designed it to be intuitive and user-friendly, with sleek graphics and smooth gameplay so everyone can have fun playing our game. We’re proud of what we’ve accomplished in such a short amount of time.
+We hope that our typing game will help people improve their typing skills while also having fun. So why not give it a try and see how fast you can type? Thank you for visiting our website, and we hope you enjoy playing our game!</p>
 
-In the project directory, you can run:
 
-### `npm start`
+<h2>Tech Stacks used in this project</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>React</li>
+<li>TypeScript</li>
+<li>Tailwind CSS</li>
+<li>NodeJS</li>
+<li>ExpressJS</li>
+<li>MongoDB</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h2>Deployed Link</h2>
+<p>https://keyboard-warrior-gilt.vercel.app/<p>
