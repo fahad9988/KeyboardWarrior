@@ -5,6 +5,7 @@ import PlayerScore from './PlayerScore';
 import GameOverModal from './GameOverModal';
 import Footer from './Footer';
 import { generateRandomString } from '../utils';
+import {Navigate} from "react-router-dom";
 
 function Game() {
   const [randomString, setRandomString] = useState('');
@@ -73,6 +74,11 @@ let player2=localStorage.getItem("player2Name");
     setRandomString(generateRandomString(8));
     setTimer(10);
   };
+
+  if(!localStorage.getItem("token")){
+    alert("Please login first!")
+return <Navigate to="/"/>
+  }
 
   return (
     <div className="min-h-screen flex flex-col justify-between bg-gray-100">

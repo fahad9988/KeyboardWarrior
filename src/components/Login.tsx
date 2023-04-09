@@ -26,7 +26,9 @@ function Login() {
       .then((response) => {
        if(response.data.msg=="Login Successful"){
         alert("User Logged in Successfully");
+        localStorage.setItem("token",response.data.token);
         navigate("/");
+        window.location.reload()
        }else{
         alert("User doesn't exist");
        }

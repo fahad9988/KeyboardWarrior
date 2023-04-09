@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
+import {Navigate} from "react-router-dom";
 
 function Info() {
   const [player1, setPlayer1] = useState("");
@@ -21,6 +22,11 @@ function Info() {
     localStorage.setItem("player2Name", player2);
     navigate("/game")
   };
+
+  if(!localStorage.getItem("token")){
+    alert("Please login first!")
+return <Navigate to="/"/>
+  }
 
   return (
     <div className="max-w-md mx-auto my-10">
